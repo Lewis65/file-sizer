@@ -28,8 +28,8 @@
     <div class="wrapper">
 
         <div class="form">
-            <form action="/" method="post">
-                <input type="text" placeholder="Upload a file..."/>
+            <form action="/" method="post" enctype="multipart/form-data">
+                <input type="file" name="doc" placeholder="Upload a file..."/>
                 <button formaction="/" formmethod="post">Submit</button>
             </form>
         </div>
@@ -37,7 +37,7 @@
         <div class="result">
             Your file is...
             <div id="sizes">
-                <%= bytes %> bytes.
+                <%- bytes %>
             </div>
         </div>
 
